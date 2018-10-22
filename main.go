@@ -7,6 +7,12 @@ import (
 type person struct {
 	firstName string
 	lastName  string
+	contact   contactInfo
+}
+
+type contactInfo struct {
+	email   string
+	zipCode int
 }
 
 func main() {
@@ -17,12 +23,22 @@ func main() {
 	// hendro := person{firstName: "Segy", lastName: "Pratama"}
 
 	//3rd way
-	var hendro person
+	// var hendro person
+	// hendro.firstName = "Segy"
+	// hendro.lastName = "Pratama"
+	// fmt.Println(hendro)
+	// fmt.Printf("%+v", hendro)
 
-	hendro.firstName = "Segy"
-	hendro.lastName = "Pratama"
+	hendro := person{
+		firstName: "Segy",
+		lastName:  "Pratama",
+		contact: contactInfo{
+			email:   "segyhendropratama@gmail.com",
+			zipCode: 16112,
+		},
+	}
 
-	fmt.Println(hendro)
+	// fmt.println(hendro)
 	fmt.Printf("%+v", hendro)
 
 }
