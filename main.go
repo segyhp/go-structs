@@ -14,7 +14,15 @@ func main() {
 	// alex := person{"Alex", "Anderson"}
 
 	//2nd way
-	hendro := person{firstName: "Segy", lastName: "Pratama"}
+	// hendro := person{firstName: "Segy", lastName: "Pratama"}
+
+	//3rd way
+	var hendro person
+
+	hendro.firstName = "Segy"
+	hendro.lastName = "Pratama"
 
 	fmt.Println(hendro)
+	fmt.Printf("%+v", hendro)
+
 }
